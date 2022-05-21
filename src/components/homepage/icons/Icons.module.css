@@ -1,0 +1,78 @@
+
+.iconsContainer {
+    display: flex;
+    justify-content:space-evenly;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+.textBellowIcons {
+    position: relative;
+    top: 125px;
+    color: #207c4e;
+    font-size: 1.2em;
+    font-weight: bold;    
+}
+
+.icons {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin-bottom: -2%;
+    margin-top: -0.5%;
+}
+
+
+.car {
+        background-image: url("../../../../public/img/car-icon.svg");
+}
+
+.van {
+        background-image: url("../../../../public/img/van-icon.svg");
+}
+
+.trailer {
+        background-image: url("../../../../public/img/trailer-icon.svg");
+}
+
+.motorbike {
+        background-image: url("../../../../public/img/motorbike-icon.svg");
+}
+
+
+@media (max-width: 1153px) {
+    .icons {
+         width: 150px;
+        height: 160px;
+    }
+    .textBellowIcons {
+        top: 105px;
+    }
+}
+
+@media (max-width: 600px) {
+    .icons {
+        width: 110px;
+        height: 110px;
+    }
+.textBellowIcons {
+        top: 70px;
+        font-size: 0.8em;
+    }
+
+@media (max-width: 400px) {
+    .icons {
+         width: 90px;
+        height: 90px;
+    }
+   .textBellowIcons {
+        top: 60px;
+        font-size: 0.7em;
+        line-height: 100%;
+    }
+}
+}

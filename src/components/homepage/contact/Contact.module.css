@@ -1,0 +1,48 @@
+.homepageHeadline {
+      font-size: 2em;
+      color: white;
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+}
+
+.contactContainer {
+    width: 100%;
+    display: block;
+    line-height: 2em;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contactPhone {
+    margin: 30px 0;
+}
+
+.contactPhone a {
+    color: #800080;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mapResponsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin: 0 10%;
+}
+.mapResponsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+@media (max-width: 600px) {
+.mapResponsive {
+    margin: 0 3%;
+}
+}

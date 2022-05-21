@@ -1,0 +1,29 @@
+
+
+
+.mainTexts {
+    text-align: center;
+    color: black;
+    background-color:white;
+        margin: 5%;
+
+
+}
+
+.mainTexts p{
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+
+@media (max-width: 1153px) {
+    
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 400px) {
+
+}

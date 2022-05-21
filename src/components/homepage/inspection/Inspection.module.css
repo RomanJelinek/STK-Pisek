@@ -1,0 +1,67 @@
+.mainTexts {
+    text-align: center;
+    color: black;
+    background-color:white;
+    padding: 50px 20px;
+
+}
+.homepageHeadline {
+      font-size: 2em;
+      color: white;
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+}
+
+
+.inspectionContainer {
+margin: 5%;
+}
+
+.inspectionContainer p{
+font-size: 1.2em;
+}
+
+.inspectionContainer h3 {
+    font-size: 1.6em;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #207c4e;
+}
+
+.inspectionContainer ol li {
+    font-size: 1.7em;
+    color: #207c4e;
+    margin: 5px 3%;
+}
+
+.inspectionContainer ol li span {
+    font-size: 20px;
+    color: black;
+}
+
+.inspectionVideo {
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+}
+.inspectionVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+.inspectionContainer {
+margin: 20px 5%;
+text-align: justify;
+}
+
+.inspectionContainer ol li {
+    margin: 5px 7%;
+}
+}

@@ -1,0 +1,170 @@
+.navbar {
+    background-color: #207c4e;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+
+.navLogo {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.navSvg {
+    background-image: url("../../../../public/img/logo.svg");
+    background-size: cover;
+    width: 60px;
+    height: 50px;
+    font-weight: 800;
+    float:left;
+}
+
+.navLogoText {
+    float:left;
+    color: white;
+    padding-left: 2px;
+    font-family: 'Yellowtail', cursive;
+    font-size: 1.4em;
+}
+
+.navItems {
+    margin-right: 20px;
+}
+
+.navCtaButton {
+    background-color: #800080;
+    color: white;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+    cursor:pointer;
+    box-shadow: none;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navCtaButton:hover { 
+    background-color: #5a015a;
+}
+
+.navItems .link{
+    color: #ffff;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 10px;
+    position: relative;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.navItems .link:hover {
+    opacity: 1;
+}
+
+.navItems .link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all .25s
+}
+
+.navItems .link:hover::before {
+    width: 100%;
+}
+
+
+.navToggle {
+    display: none;
+}
+
+@media (max-width: 1153px) {
+
+    .navItems {
+        position: absolute;
+        top:60px;
+        display: flex;
+        flex-direction: column;
+        background-color: #207c4e;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all .45s;
+    }
+
+    .navItems a::before {
+        background: transparent;
+    }
+
+    .navItems.open {
+        transform: translate(0);
+    }
+
+    .navCtaButton {
+        margin: 0;
+        width: 90%;
+        text-align: left;
+    }
+
+    .navToggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .navToggle .bar {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background: white;
+    }
+
+      .navToggle .bar::before,
+      .navToggle .bar::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+        transition: all .45s easy-in-out;
+    }
+    
+    .navToggle .bar::before {
+        width: 32px;
+        transform: translateY(-8px);
+    }
+
+      .navToggle .bar::after {
+        width: 32px;
+        transform: translateY(8px);
+    }
+
+
+    .navToggle.open .bar {
+        transform: translateX(-40px);
+        background: transparent;
+    }
+
+    .navToggle.open .bar::before {
+        width: 32px;
+        transform: rotate(45deg) translate(26px, -26px);
+    }
+
+      .navToggle.open .bar::after {
+        transform: rotate(-45deg) translate(26px, 26px);
+    }
+
+}
