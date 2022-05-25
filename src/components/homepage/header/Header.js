@@ -142,6 +142,10 @@ const Header = (props) => {
     error && props.liftError(error);
   },[error])
 
+  useEffect(() => {
+    props.liftOpenState(isOpen);
+  }, [isOpen]);
+
   return (
     <>
       <div className={styles.mainImg}></div>

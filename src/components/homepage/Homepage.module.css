@@ -1,29 +1,36 @@
-
-
-
 .mainTexts {
-    text-align: center;
-    color: black;
-    background-color:white;
-        margin: 5%;
-
-
+  text-align: center;
+  color: black;
+  background-color: white;
+  margin: 5%;
 }
 
-.mainTexts p{
-    text-align: justify;
-    font-size: 1.2em;
+.mainTexts p {
+  text-align: justify;
+  font-size: 1.2em;
 }
 
+.streamWrapper {
+  width: 80%;
+  height: 600px;
+  margin: 0 auto 150px auto;
+}
 
-@media (max-width: 1153px) {
-    
+@media (max-width: 800px) {
+  .streamWrapper {
+    height: 400px;
+  }
 }
 
 @media (max-width: 600px) {
-
+  .streamWrapper {
+    height: 250px;
+  }
 }
 
 @media (max-width: 400px) {
-
+  .streamWrapper {
+    width: 100%;
+    height: 200px;
+  }
 }
