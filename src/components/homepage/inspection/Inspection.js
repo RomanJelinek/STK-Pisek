@@ -50,8 +50,9 @@ const Inspection = () => {
             </li>
             <li>
               <span>
-                Měření emisí většiny vozidel, včetně alternativního pohonu LPG a CNG
-                (BRC, LANDI RENZO, LOVATO, ZAVOLI, AUTRONIC, KME, EUROPEGAS, STAG, STAG).
+                Měření emisí většiny vozidel, včetně alternativního pohonu
+                <b>LPG</b> a <b>CNG</b> (BRC, LANDI RENZO, LOVATO, ZAVOLI,
+                AUTRONIC, KME, EUROPEGAS, STAG, STAG).
               </span>
             </li>
             <li>
