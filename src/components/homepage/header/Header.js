@@ -37,12 +37,15 @@ const Header = (props) => {
           : followingTime.getDate();
       let followingMonth =
         followingTime.getMonth() + 1 < 10
-          ? '0' + followingTime.getMonth()
-          : followingTime.getMonth();
+          ? '0' + (followingTime.getMonth() + 1)
+          : followingTime.getMonth() + 1;
       let followingYear = followingTime.getFullYear();
 
       const fetchHoliday = async () => {
         setError(null);
+        console.log(
+          `https://svatkyapi.cz/api/day/${followingYear}-${followingMonth}-${followingDay}`
+        );
         try {
           const response = await fetch(
             `https://svatkyapi.cz/api/day/${followingYear}-${followingMonth}-${followingDay}`,
@@ -54,7 +57,6 @@ const Header = (props) => {
               },
             }
           );
-
           if (!response.ok) {
             throw new Error(
               'Něco se pokazilo. Zkuste prosím aktualizovat stránku'
@@ -62,6 +64,8 @@ const Header = (props) => {
           }
 
           let holiday = await response.json();
+
+          console.log(holiday)
 
           let openingHours = {};
           if (

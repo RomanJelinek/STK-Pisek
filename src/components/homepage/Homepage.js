@@ -32,7 +32,11 @@ const Homepage = (props) => {
   return (
     <>
       <Navbar />
-      <Header liftWeek={getWeek} liftOpenState={getOpenState} liftError={getError} />
+      <Header
+        liftWeek={getWeek}
+        liftOpenState={getOpenState}
+        liftError={getError}
+      />
       <Icons />
       {anyPosts ? <News /> : ''}
 
@@ -48,17 +52,21 @@ const Homepage = (props) => {
           prohlídka probíhá. Máte jakýkoliv dotaz? Ozvěte se nám na čísle 382
           219 089. Těšíme se na Vás!
         </p>
-       {isOpen && <div className={styles.streamWrapper}>
-          <h2>Aktuální provoz na STK:</h2>
-          <h4>(pro spuštění webkamery klikněte na tlačítko uprostřed videa)</h4>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://rtsp.me/embed/nKD6r36D/"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </div>}
+        {isOpen && (
+          <div className={styles.streamWrapper}>
+            <h2>Aktuální provoz na STK:</h2>
+            <h4>
+              (pro spuštění webkamery klikněte na tlačítko uprostřed videa)
+            </h4>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://rtsp.me/embed/nKD6r36D/"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
       </div>
       <Inspection />
       <OpeningHours week={week} error={error} />
