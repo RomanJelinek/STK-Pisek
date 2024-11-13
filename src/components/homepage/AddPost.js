@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, push, onValue, remove } from 'firebase/database';
-import { Link } from 'next/router';
+import Link from 'next/link';
 
 // Firebase konfigurace
 const firebaseConfig = {
