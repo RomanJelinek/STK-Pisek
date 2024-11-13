@@ -10,10 +10,11 @@ const Inspection = () => {
       <div className={styles.inspectionContainer}>
         <h3> Před prohlídkou </h3>
         <p>
-          Je potřeba si vzít s sebou originály malého a velkého technického
-          průkazu. Dále si prosím sundejte snímatelné disky z kol automobilů,
-          případně i přívěsů. Poté stačí již jen zjistit otevírací dobu. Berte
-          prosím na vědomí, že Vás přijímáme bez objednání. Platbu lze možno provést hotově i platební kartou.
+          Je potřeba si vzít s sebou originál malého technického průkazu. Dále
+          si prosím sundejte snímatelné disky z kol automobilů, případně i
+          přívěsů. Poté stačí již jen zjistit otevírací dobu. Berte prosím na
+          vědomí, že Vás přijímáme bez objednání. Platbu lze možno provést
+          hotově i platební kartou.
         </p>
         <h3>Jak probíhá prohlídka </h3>
         <p>

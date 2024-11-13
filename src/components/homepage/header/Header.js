@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
-
 const Header = (props) => {
   const closingTimes = ['17:00', '15:30', '13:00'];
   const [isOpen, setIsOpen] = useState(true);
@@ -15,7 +14,7 @@ const Header = (props) => {
 
   const weekDay = new Date().getDay();
   const date = new Date().getDate();
-  const month = new Date().getMonth() - 1
+  const month = new Date().getMonth() - 1;
   const hour = new Date().getHours();
   const minute = new Date().getMinutes();
 
@@ -65,7 +64,7 @@ const Header = (props) => {
 
           let holiday = await response.json();
 
-          console.log(holiday)
+          console.log(holiday);
 
           let openingHours = {};
           if (
@@ -142,9 +141,9 @@ const Header = (props) => {
     props.liftWeek(week);
   }, [week]);
 
-  useEffect(()=>{
+  useEffect(() => {
     error && props.liftError(error);
-  },[error])
+  }, [error]);
 
   useEffect(() => {
     props.liftOpenState(isOpen);

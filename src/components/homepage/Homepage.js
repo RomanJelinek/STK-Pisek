@@ -1,33 +1,31 @@
-import Navbar from "./navbar/Navbar";
-import News from "./news/News";
-import { useState, useEffect, useContext } from "react";
-import Icons from "./icons/Icnos";
-import Inspection from "./inspection/Inspection"
-import OpeningHours from "./opening-hours/OpeningHours"
-import Contact from "./contact/Contact"
-import Header from "./header/Header"
-import Footer from "./footer/Footer"
+import Navbar from './navbar/Navbar';
+import News from './news/News';
+import { useState, useEffect, useContext } from 'react';
+import Icons from './icons/Icnos';
+import Inspection from './inspection/Inspection';
+import OpeningHours from './opening-hours/OpeningHours';
+import Contact from './contact/Contact';
+import Header from './header/Header';
+import Footer from './footer/Footer';
 import styles from './Homepage.module.css';
-
-
 
 const Homepage = (props) => {
   const [anyPosts, setAnyPosts] = useState(false);
-  const [week, setWeek] = useState([])
-  const [isOpen, setIsOpen] = useState(false)
+  const [week, setWeek] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const [error, setError] = useState(null);
 
-   const getWeek = (w) => {
-     setWeek(w);
-   };
+  const getWeek = (w) => {
+    setWeek(w);
+  };
 
-   const getError = (e) => {
-     setError(e)
-   }
+  const getError = (e) => {
+    setError(e);
+  };
 
-   const getOpenState = (o) => {
-     setIsOpen(o);
-   };
+  const getOpenState = (o) => {
+    setIsOpen(o);
+  };
 
   return (
     <>
@@ -38,7 +36,7 @@ const Homepage = (props) => {
         liftError={getError}
       />
       <Icons />
-      {anyPosts ? <News /> : ''}
+      <News />
 
       <div className={styles.mainTexts}>
         <h1>STK Písek</h1>
