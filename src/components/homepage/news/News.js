@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import styles from './News.module.css';
 
 const News = () => {
   const [postsToShow, setPostsToShow] = useState([]);
 
   useEffect(() => {
-    // Firebase konfigurace
     const firebaseConfig = {
       databaseURL: 'https://stkpisek-a2a01-default-rtdb.firebaseio.com/',
     };
 
-    // Inicializace Firebase
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
     const postsRef = ref(database, 'posts');
@@ -39,52 +38,24 @@ const News = () => {
 
   return (
     postsToShow.length > 0 && (
-      <div style={styles.container}>
-        <h2 style={styles.headline}>Důležité informace:</h2>
-        {postsToShow.map((post) => (
-          <div key={post.id} style={styles.post}>
-            <h3 style={styles.postTitle}>{post.title}</h3>
-            <p style={styles.postContent}>{post.content}</p>
-          </div>
-        ))}
-      </div>
+      <section className={styles.newsSection}>
+        <div className={styles.newsContainer}>
+          <h2 className={styles.newsHeadline}>Důležité informace:</h2>
+          {postsToShow.map((post) => (
+            <article key={post.id} className={styles.newsPost}>
+              <h3 className={styles.postTitle}>{post.title}</h3>
+              <div
+                className={styles.postContent}
+                dangerouslySetInnerHTML={{
+                  __html: post.content.replace(/\n/g, '<br />'),
+                }}
+              ></div>
+            </article>
+          ))}
+        </div>
+      </section>
     )
   );
-};
-
-const styles = {
-  container: {
-    backgroundColor: '#f8f9fa',
-    padding: '20px',
-    borderRadius: '8px',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-    maxWidth: '600px',
-    margin: '20px auto',
-    fontFamily: 'Arial, sans-serif',
-  },
-  headline: {
-    fontSize: '24px',
-    color: '#333',
-    marginBottom: '15px',
-    textAlign: 'center',
-  },
-  post: {
-    backgroundColor: '#ffffff',
-    padding: '15px',
-    borderRadius: '5px',
-    marginBottom: '10px',
-    border: '1px solid #ddd',
-  },
-  postTitle: {
-    textAlign: 'center',
-    fontSize: '20px',
-    color: '#007bff',
-    marginBottom: '5px',
-  },
-  postContent: {
-    fontSize: '16px',
-    color: '#555',
-  },
 };
 
 export default News;

@@ -146,7 +146,11 @@ export default function AddPost() {
             {posts.map((post) => (
               <div key={post.id} style={styles.post}>
                 <h3>{post.title}</h3>
-                <p>{post.content}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: post.content.replace(/\n/g, '<br />'),
+                  }}
+                ></p>
                 <p>
                   <strong>Expiruje:</strong> {post.expiration || 'Bez expirace'}
                 </p>
