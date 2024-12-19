@@ -56,13 +56,9 @@ const Homepage = (props) => {
             <h4>
               (pro spuštění webkamery klikněte na tlačítko uprostřed videa)
             </h4>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://rtsp.me/embed/nKD6r36D/"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
+              <div className={styles.iframeContainer}>
+            <iframe allowfullscreen src="https://streamedian.com/saas/embed?s=cnRzcDovLzg4LjEwMC4yMC4xNTY6NTU0&r=NjQweDQ4MA==&w=d3NzOi8vc3RyZWFtZWRpYW4uY29tL2RlbW9uc3RyYXRpb24vd3Mv"></iframe>
+            </div>
           </div>
         )}
       </div>

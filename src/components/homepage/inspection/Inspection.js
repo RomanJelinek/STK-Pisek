@@ -10,7 +10,7 @@ const Inspection = () => {
       <div className={styles.inspectionContainer}>
         <h3> Před prohlídkou </h3>
         <p>
-          Je potřeba si vzít s sebou originál malého technického průkazu. Dále
+          Je potřeba si vzít s sebou originál malého technického průkazu ( Kdo má ještě velký TP vezměte sebou také ). Dále
           si prosím sundejte snímatelné disky z kol automobilů, případně i
           přívěsů. Poté stačí již jen zjistit otevírací dobu. Berte prosím na
           vědomí, že Vás přijímáme bez objednání. Platbu lze možno provést
