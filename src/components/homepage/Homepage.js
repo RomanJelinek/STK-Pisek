@@ -57,8 +57,8 @@ const Homepage = (props) => {
               (pro spuštění webkamery klikněte na tlačítko uprostřed videa)
             </h4>
               <div className={styles.iframeContainer}>
-            <iframe allowfullscreen src="https://streamedian.com/saas/embed?s=cnRzcDovLzg4LjEwMC4yMC4xNTY6NTU0&r=NjQweDQ4MA==&w=d3NzOi8vc3RyZWFtZWRpYW4uY29tL2RlbW9uc3RyYXRpb24vd3Mv"></iframe>
-            </div>
+<iframe width="640" height="480" src="https://rtsp.me/embed/NRBfRFza/" frameborder="0" title="RTSP Stream Player" allowfullscreen>
+Iframes not supported. Broadcasting <a href="https://rtsp.me/en/" title = "rtsp video steaming service">RTSP.ME</a> player </iframe>            </div>
           </div>
         )}
       </div>
